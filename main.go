@@ -23,7 +23,7 @@ type S3Client struct {
 	dstBucket string
 }
 
-func News3Client(srcBucket, dstBucket string) (*S3Client, error) {
+func NewS3Client(srcBucket, dstBucket string) (*S3Client, error) {
 	cfg, err := config.LoadDefaultConfig(context.TODO())
 
 	if err != nil {
